@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d2219dc3-60b6-424d-8488-c1e11a61de4e",
+		"name": "Services - Web Socket 02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26121086",
+		"_collection_link": "https://www.postman.com/develhope-exercise-postman/workspace/develhope-postman-use/collection/26121086-d2219dc3-60b6-424d-8488-c1e11a61de4e?action=share&creator=26121086&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Post a new message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"sender\" : \"Alessio\",\r\n\"type\": \"chat message\",\r\n\"message\": \"Hi guys!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/broadcast-message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"broadcast-message"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post a new message",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"sender\" : \"Alessio\",\r\n\"type\": \"chat message\",\r\n\"message\": \"Hi guys!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/broadcast-message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"broadcast-message"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 May 2023 13:37:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sender\": \"Alessio\",\n    \"type\": \"chat message\",\n    \"message\": \"Hi guys!\"\n}"
+				}
+			]
+		}
+	]
+}

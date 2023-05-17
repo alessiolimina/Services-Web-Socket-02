@@ -18,10 +18,11 @@ public class NotificationController {
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
-    @PostMapping("/notification")
+    @PostMapping("/broadcast-message")
     public ResponseEntity getBroadcastMessage(@RequestBody MessageDTO messageDTO){
         simpMessagingTemplate.convertAndSend("/topic/broadcast-message", messageDTO);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        System.out.println("Arrived this message " + messageDTO.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(messageDTO);
     }
 
     @MessageMapping("/client-message")
